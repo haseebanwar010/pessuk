@@ -1,0 +1,73 @@
+.ac-container{
+
+	margin: 10px auto 30px auto;
+	text-align: left;
+}
+.ac-container label{
+	padding: 12px 40px 12px 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	cursor: pointer;
+	color: #777;
+	font-size: 17px;
+	font-weight: 500;
+	background: #f5f5f5;
+	/*background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+	background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+	background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	margin-bottom: 20px;
+}
+/*.ac-container label{
+	
+	background: transparent url(../../images/arrow_down.png) no-repeat 99% 12px;
+}*/
+.ac-container input:checked + label:hover:after{
+	background-image: url(../../images/arrow_up.png);
+}
+.ac-container input:checked + label::after{
+	background-image: url(../../images/arrow_up.png);
+}
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+
+.ac-container input:checked ~ article{
+	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container input:checked ~ article.ac-small{
+	height: auto;
+	margin-top: -20px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.ac-container input:checked ~ article.ac-medium{
+	height: auto;
+}
+.ac-container input:checked ~ article.ac-large{
+	height: auto;
+}
